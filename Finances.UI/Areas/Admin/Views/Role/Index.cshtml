@@ -1,0 +1,43 @@
+﻿@model List<Finances.EntityLayer.Concrete.AppRole>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title m-b-0">Hakkımızda</h5>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Rol Adı</th>
+                        <th scope="col">Sil</th>
+                        <th scope="col">Güncelle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.Id</th>
+                            <td>@item.Name</td>
+                            <td><a asp-controller="Role" asp-action="DeleteRole" asp-route-id="@item.Id" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a asp-controller="Role" asp-action="UpdateRole" asp-route-id="@item.Id" class="btn btn-outline-warning">Güncelle</a></td>
+                        </tr>
+                    }
+
+
+            </table>
+
+        </div>
+        <br />
+        <a asp-controller="Role" asp-action="AddRole" class="btn btn-outline-success">Ekle</a>
+    </div>
+</div>
+
+
+

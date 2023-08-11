@@ -1,0 +1,26 @@
+﻿@model Finances.DtoLayer.DTOs.ContactUs.UpdateContactUsDto
+@{
+    ViewData["Title"] = "UpdateContactUs";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body wizard-content">
+        <h4 class="card-title">İletişim Güncelleme Sayfası</h4>
+        <h6 class="card-subtitle"></h6>
+        <form method="post">
+            <div>
+                <section>
+                    <input type="hidden" asp-for="ContactUsID"/>
+                    <label for="userName">İkon </label>
+                    <input type="text" class="required form-control" asp-for="ContactUsIcon">
+                    <label for="password">Konum </label>
+                    <input type="text" class="required form-control" asp-for="ContactUsLocation">
+                </section>
+                <br />
+                <button class="btn btn-outline-success">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
+

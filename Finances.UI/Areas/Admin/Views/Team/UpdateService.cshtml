@@ -1,0 +1,31 @@
+﻿@model Finances.DtoLayer.DTOs.Team.UpdateTeamDto
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body wizard-content">
+        <h4 class="card-title">Takım Ekleme Sayfası</h4>
+        <h6 class="card-subtitle"></h6>
+        <form method="post">
+            <div>
+                <section>
+                    <input type="hidden" asp-for="TeamID"/>
+                    <label for="userName">Ad </label>
+                    <input type="text" class="required form-control" asp-for="TeamName">
+                    <label for="password">Soyad</label>
+                    <input type="text" class="required form-control" asp-for="TeamSurname">
+                    <label for="password">Departman</label>
+                    <input type="text" class="required form-control" asp-for="TeamDepartment">
+                    <label for="password">Resim</label>
+                    <input type="text" class="required form-control" asp-for="TeamImage">
+                </section>
+                <br />
+                <button class="btn btn-outline-success">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

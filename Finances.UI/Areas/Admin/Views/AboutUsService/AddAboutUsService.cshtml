@@ -1,0 +1,26 @@
+﻿@model Finances.DtoLayer.DTOs.AboutUsService.AddAboutUsServiceDto
+@{
+    ViewData["Title"] = "AddAboutUsService";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body wizard-content">
+        <h4 class="card-title">Hakkımzıda Ekleme Sayfası</h4>
+        <h6 class="card-subtitle"></h6>
+        <form method="post">
+            <div>
+                <section>
+                    <label for="userName">Başlık </label>
+                    <input type="text" class="required form-control" asp-for="AboutUsServiceTitle">
+                    <label for="password">İçerik </label>
+                    <input type="text" class="required form-control" asp-for="AboutUsServiceDescription">
+                    <label for="confirm">Resim </label>
+                    <input type="text" class="required form-control" asp-for="AboutUsServiceImage">
+                </section>
+                <br />
+                <button class="btn btn-outline-success">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>

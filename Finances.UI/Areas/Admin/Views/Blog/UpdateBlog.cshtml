@@ -1,0 +1,31 @@
+﻿@model Finances.DtoLayer.DTOs.Blog.UpdateBlogDto
+@{
+    ViewData["Title"] = "UpdateBlog";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<div class="card">
+    <div class="card-body wizard-content">
+        <h4 class="card-title">Blog Güncelleme Sayfası</h4>
+        <h6 class="card-subtitle"></h6>
+        <form method="post">
+            <div>
+                <section>
+                    <input type="hidden" asp-for="BlogID"/>
+                    <label for="userName">Başlık </label>
+                    <input type="text" class="required form-control" asp-for="BlogTitle">
+                    <label for="password">İçerik </label>
+                    <input type="text" class="required form-control" asp-for="BlogDescription">
+                    <label for="confirm">Tarih </label>
+                    <input type="text" class="required form-control" asp-for="BlogDate">
+                    <label for="confirm">Yazar </label>
+                    <input type="text" class="required form-control" asp-for="BlogWriter">
+                    <label for="confirm">Resim </label>
+                    <input type="text" class="required form-control" asp-for="BlogImage">
+                </section>
+                <br />
+                <button class="btn btn-outline-success">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
+

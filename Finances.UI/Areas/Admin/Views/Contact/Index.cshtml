@@ -1,0 +1,48 @@
+﻿@model List<Finances.DtoLayer.DTOs.Contact.ResultContactDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title m-b-0">İletişim</h5>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Ad</th>
+                        <th scope="col">Soyad</th>
+                        <th scope="col">Mail</th>
+                        <th scope="col">Konu</th>
+                        <th scope="col">Mesaj</th>
+                        <th scope="col">Sil</th>
+                        <th scope="col">Güncelle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.ContactID</th>
+                            <td>@item.ContactName</td>
+                            <td>@item.ContactSurname</td>
+                            <td>@item.ContactEmail</td>
+                            <td>@item.ContactSubject</td>
+                            <td>@item.ContactMessage</td>
+                            <td><a asp-controller="Contact" asp-action="DeleteContact" asp-route-id="@item.ContactID" class="btn btn-outline-danger">Sil</a></td>
+                        </tr>
+                    }
+
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+

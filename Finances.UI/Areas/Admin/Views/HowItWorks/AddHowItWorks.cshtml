@@ -1,0 +1,26 @@
+﻿@model Finances.DtoLayer.DTOs.HowItWorks.AddHowItWorksDto
+@{
+    ViewData["Title"] = "AddHowItWorks";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<div class="card">
+    <div class="card-body wizard-content">
+        <h4 class="card-title"> Ekleme Sayfası</h4>
+        <h6 class="card-subtitle"></h6>
+        <form method="post">
+            <div>
+                <section>
+                    <label for="userName">Başlık </label>
+                    <input type="text" class="required form-control" asp-for="HowItWorksTitle">
+                    <label for="userName">İçerik </label>
+                    <input type="text" class="required form-control" asp-for="HowItWorksDescription">
+                </section>
+                <br />
+                <button class="btn btn-outline-success">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

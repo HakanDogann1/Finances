@@ -1,0 +1,31 @@
+﻿@model Finances.DtoLayer.DTOs.AboutUs.AddAboutUsDto
+@{
+    Layout = null;
+}
+<br />
+<br />
+<br />
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <form method="post">
+        <div>
+            <label>Başlık</label>
+            <input type="text" asp-for="AboutUsTitle"/>
+            <span asp-validation-for="AboutUsTitle"></span>
+        </div>
+        <div>
+            <label>İçerik</label>
+            <input type="text" asp-for="AboutUsDescription" />
+            <span asp-validation-for="AboutUsDescription"></span>
+        </div>
+        <div>
+            <label>Resim</label>
+            <input type="text" asp-for="AboutUsImage" />
+            <span asp-validation-for="AboutUsImage"></span>
+        </div>
+        <br />
+        <button class="btn btn-outline-success">Ekle</button>
+       
+    </form>
+</div>

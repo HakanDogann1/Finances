@@ -1,0 +1,25 @@
+﻿@model Finances.DtoLayer.DTOs.Gallery.AddGalleryDto
+@{
+    ViewData["Title"] = "AddGallery";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body wizard-content">
+        <h4 class="card-title">Resim Ekleme Sayfası</h4>
+        <h6 class="card-subtitle"></h6>
+        <form method="post">
+            <div>
+                <section>
+                    <label for="userName">Resim </label>
+                    <input type="text" class="required form-control" asp-for="GalleryImage">
+                </section>
+                <br />
+                <button class="btn btn-outline-success">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

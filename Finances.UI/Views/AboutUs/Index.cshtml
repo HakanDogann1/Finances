@@ -1,0 +1,30 @@
+﻿@model List<Finances.DtoLayer.DTOs.AboutUs.ResultAboutUsDto>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>İçerik</th>
+            <th>Resim</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AboutUsID</td>
+                <td>@item.AboutUsTitle</td>
+                <td>@item.AboutUsDescription</td>
+                <td>@item.AboutUsImage</td>
+                <td><a href="/AboutUs/DeleteAboutUs/@item.AboutUsID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/AboutUs/UpdateAboutUs/@item.AboutUsID" class="btn btn-outline-warning">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/AboutUs/AddAboutUs/" class="btn btn-outline-success">Ekle</a>
+</div>

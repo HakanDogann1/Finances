@@ -1,0 +1,38 @@
+﻿@model List<Finances.DtoLayer.DTOs.HappyCustomer.ResultHappyCustomerDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title m-b-0">Mutlu Müşteri</h5>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Yorum</th>
+                        <th scope="col">Güncelle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.HappyCustomerID</th>
+                            <td>@item.HappyComment</td>
+                            <td><a asp-controller="HappyCustomer" asp-action="DeleteHappyCustomer" asp-route-id="@item.HappyCustomerID" class="btn btn-outline-danger">Sil</a></td>
+                        </tr>
+                    }
+
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+

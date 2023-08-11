@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Finances.DtoLayer.DTOs.Service
+{
+    public class AddServiceDto
+    {
+        public string ServiceTitle { get; set; }
+        public string ServiceDescription { get; set; }
+        public string ServiceImage { get; set; }
+    }
+}

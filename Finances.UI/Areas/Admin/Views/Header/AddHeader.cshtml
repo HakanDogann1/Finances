@@ -1,0 +1,27 @@
+﻿@model Finances.DtoLayer.DTOs.Header.AddHeaderDto
+@{
+    ViewData["Title"] = "AddHeader";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body wizard-content">
+        <h4 class="card-title">İletişim Ekleme Sayfası</h4>
+        <h6 class="card-subtitle"></h6>
+        <form method="post">
+            <div>
+                <section>
+                    <label for="userName">Başlık 1 </label>
+                    <input type="text" class="required form-control" asp-for="HeaderTitle1">
+                    <label for="password">Başlık 2 </label>
+                    <input type="text" class="required form-control" asp-for="HeaderTitle2">
+                    <label for="password">Resim </label>
+                    <input type="text" class="required form-control" asp-for="HeaderImage">
+                </section>
+                <br />
+                <button class="btn btn-outline-success">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
+

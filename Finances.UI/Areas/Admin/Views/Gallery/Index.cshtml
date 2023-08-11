@@ -1,0 +1,42 @@
+﻿@model List<Finances.DtoLayer.DTOs.Gallery.ResultGalleryDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title m-b-0">İletişim</h5>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Resim</th>
+                        <th scope="col">Güncelle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.GalleryID</th>
+                            <td>@item.GalleryImage</td>
+                            <td><a asp-controller="Gallery" asp-action="DeleteGallery" asp-route-id="@item.GalleryID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a asp-controller="Gallery" asp-action="UpdateGallery" asp-route-id="@item.GalleryID" class="btn btn-outline-warning">Güncelle</a></td>
+                        </tr>
+                    }
+
+
+            </table>
+
+        </div>
+        <br />
+        <td><a asp-controller="Gallery" asp-action="AddGallery" class="btn btn-outline-success">Ekle</a></td>
+
+    </div>
+</div>
+
+

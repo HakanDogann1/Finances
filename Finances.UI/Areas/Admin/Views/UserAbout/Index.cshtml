@@ -1,0 +1,30 @@
+﻿@model Finances.UI.Areas.Admin.Models.UserAboutViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body wizard-content">
+        <h4 class="card-title">Profil</h4>
+        <h6 class="card-subtitle"></h6>
+        <form method="post">
+            <div>
+                <section>
+                    <label for="userName">Ad </label>
+                    <input type="text" class="required form-control" asp-for="Name">
+                    <label for="password">Soyad </label>
+                    <input type="text" class="required form-control" asp-for="Surname">
+                    <label for="confirm">Kullanıcı Adı </label>
+                    <input type="text" class="required form-control" asp-for="UserName">
+                    <label for="confirm">Şehir </label>
+                    <input type="text" class="required form-control" asp-for="City">
+                    <label for="confirm">Email </label>
+                    <input type="text" class="required form-control" asp-for="Email">
+                </section>
+                <br />
+                <button class="btn btn-outline-success">Ekle</button>
+            </div>
+        </form>
+    </div>
+</div>
